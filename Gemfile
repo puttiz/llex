@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'nesta', '0.9.5'
+gem 'compass', '0.11.1'
 
 
 
