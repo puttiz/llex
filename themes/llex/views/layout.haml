@@ -1,0 +1,20 @@
+!!! 5
+%html
+  %head
+    %meta{charst: "utf-8"}
+    - if @description
+      %meta{name: "description", content: @description}
+    - if @keywords
+      %meta{name: "keywords", content: @keywords}
+    %title= @title
+    %link{rel: "stylesheet", href: "/assets/c/style.css"}
+    - if local_stylesheet?
+      %link{rel: "stylesheet", href: "/assets/c/local.css"}
+    = haml :analytics, :layout => false
+  %body{class: @body_class}
+    = yield
+    %footer
+      %small
+        Powered by Nesta, a
+        %a{href: "http://nestacms.com"} Ruby CMS
+        © Puttiz
