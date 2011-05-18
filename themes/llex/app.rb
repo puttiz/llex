@@ -4,13 +4,33 @@ module Nesta
   class App
 
     use Rack::Static, :urls => ["/assets"], :root => "themes/llex/public"
+    
+    def production?
+      environment == :production
+    end
+
+    helpers do
+      def partial(template, *args)
+        template_array = template.to_s.split('/')
+        template = template_array[0..-2].join('/') + "/_#{template_array[-1]}"
+        options = args.last.is_a?(Hash) ? args.pop : {}
+        options.merge!(:layout => false)
+        if collection = options.delete(:collection) then
+          collection.inject([]) do |buffer, member|
+            buffer << erb(:"#{template}", options.merge(:layout => false, :locals => {template_array[-1].to_sym => member}))
+          end.join("\n")
+        else
+          haml(:"#{template}", options)
+        end
+      end
+    end
 
     configure do
       Compass.configuration do |config|
         # config.project_path = File.dirname(__FILE__)
         # config.sass_dir = "scss"
-        # config.output_style = :compact
-        # config.line_comments = false
+        config.output_style = production? ? :compressed : :expanded
+        config.line_comments = production? ? false : true
       end
     
       set :scss, Compass.sass_engine_options
@@ -19,7 +39,7 @@ module Nesta
 
     get '/css/:name.css' do
       content_type 'text/css', :charset => 'utf-8'
-      cache scss(params[:name].to_sym)
+      cache scss(:"scss/#{params[:name].to_sym}")
     end
     
   end

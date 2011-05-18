@@ -7,14 +7,17 @@
     - if @keywords
       %meta{name: "keywords", content: @keywords}
     %title= @title
-    %link{rel: "stylesheet", href: "/assets/c/style.css"}
-    - if local_stylesheet?
-      %link{rel: "stylesheet", href: "/assets/c/local.css"}
-    = haml :analytics, :layout => false
+    <!--[if ! lte IE 6]><!-->
+    %link{href: "/css/style.css", media: "screen", rel: "stylesheet"}
+    <!--<![endif]-->
+    /[if lte IE 6]
+      %link{rel: "stylesheet", href: "http://universal-ie6-css.googlecode.com/files/ie6.1.1.css", media: "screen, projection"}
+    /[if lt IE 9]
+      %script{src: "//html5shim.googlecode.com/svn/trunk/html5.js"}
+    = local_stylesheet_link_tag('local')
+    = partial :analytics
   %body{class: @body_class}
-    = yield
-    %footer
-      %small
-        Powered by Nesta, a
-        %a{href: "http://nestacms.com"} Ruby CMS
-        © Puttiz
+    #container
+      = partial :header
+      = yield
+      = partial :footer
