@@ -9,8 +9,6 @@
     %title
       - if @page.metadata('title')
         = @page.metadata('title') + ' – ' + @site_title
-      - elsif @page.heading
-        = @page.heading + ' - ' + @site_title
       - else
         = @site_title
     <!--[if ! lte IE 6]><!-->

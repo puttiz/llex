@@ -1,5 +1,18 @@
 Template: home
 Class: home
 
+/ feature
 %article#feature.inner-wrap.featured
-  %section#excerpt.top
+  - latest_articles(1).each do |article|
+    - unless article.metadata('feature').nil? || article.metadata('feature').empty?
+      %section#excerpt.top
+        %header
+          - if article.date
+            %time{datetime: "#{article.date.to_s}", pubdate: true}= format_date(article.date)
+            %h1
+              %a{href: "#{article.abspath}"}= article.metadata('title')
+        %figure
+          %img{src: "/assets/i/#{article.abspath}.png", alt: "#{article.metadata('title')}"}
+        %p
+          ~ article.summary
+          %a{href: "#{article.abspath}"}= article.read_more
