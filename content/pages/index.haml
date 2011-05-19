@@ -16,3 +16,28 @@ Class: home
         %p
           ~ article.summary
           %a{href: "#{article.abspath}"}= article.read_more
+
+/ elsewhere -- TODO
+
+/ journal
+%section#journal.sidebar
+  %hgroup
+    %h1 From the Journal
+    %h2
+      Latest writings from my
+      %i journal
+    %h3 Read. Discuss. Repeat
+  - latest_articles(3).each do |article|
+    %article
+      %figure
+        %img{src: "/assets/i/#{article.abspath}.png", alt: "#{article.metadata('title')}"}
+      %header
+        %time{datetime: "#{article.date.to_s}", pubdate: true}= format_date(article.date)
+        %h1
+          %a{href: "#{article.abspath}"}= article.metadata('title')
+      %p
+        ~ article.summary
+      %footer
+        %a{href: "#{article.abspath}"}= article.read_more
+  %foore.section-footer
+    %a.proceed{href: "/journal"} More Journal Entries →
