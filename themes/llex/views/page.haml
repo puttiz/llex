@@ -1,1 +1,8 @@
-~ @page.to_html(self)
+/ pages
+%article{id: "#{@page.metadata('class')}", class: "inner-wrap"}
+  ~ @page.to_html(self)
+
+  %section.middle
+    = partial :summaries, :locals => { :pages => @page.pages }
+    - unless @page.articles.empty?
+      = partial :summaries, :locals => { :pages => @page.articles, :heading => :h3 }

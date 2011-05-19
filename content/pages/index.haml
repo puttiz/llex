@@ -3,7 +3,7 @@ Class: home
 
 / feature
 %article#feature.inner-wrap.featured
-  - latest_articles(1).each do |article|
+  - latest_articles.each do |article|
     - unless article.metadata('feature').nil? || article.metadata('feature').empty?
       %section#excerpt.top
         %header
