@@ -6,7 +6,13 @@
       %meta{name: "description", content: @description}
     - if @keywords
       %meta{name: "keywords", content: @keywords}
-    %title= @title
+    %title
+      - if @page.metadata('title')
+        = @page.metadata('title') + ' – ' + @site_title
+      - elsif @page.heading
+        = @page.heading + ' - ' + @site_title
+      - else
+        = @site_title
     <!--[if ! lte IE 6]><!-->
     %link{href: "/css/style.css", media: "screen", rel: "stylesheet"}
     <!--<![endif]-->
@@ -15,8 +21,9 @@
     /[if lt IE 9]
       %script{src: "//html5shim.googlecode.com/svn/trunk/html5.js"}
     = local_stylesheet_link_tag('local')
+    %link(href="/articles.xml" rel="alternate" type="application/atom+xml")
     = partial :analytics
-  %body{class: @body_class}
+  %body{class: @page.metadata('class')? @page.metadata('class') : @page.heading}
     #container
       = partial :header
       = yield
