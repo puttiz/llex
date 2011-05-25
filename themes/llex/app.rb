@@ -1,5 +1,7 @@
 require "compass"
 
+ROOT = File.dirname(__FILE__)
+
 module Nesta
   class App
 
@@ -7,6 +9,10 @@ module Nesta
     
     def production?
       environment == :production
+    end
+
+    def local_stylesheet?
+      File.exist?(File.expand_path('views/scss/local.sass', ROOT))
     end
 
     helpers do
@@ -37,10 +43,15 @@ module Nesta
       # set :views, File.expand_path('scss', File.dirname(__FILE__))
     end
 
+    get '/css/local.css' do
+      content_type 'text/css', :charset => 'utf-8'
+      cache sass(:"scss/local")
+    end
+
     get '/css/:name.css' do
       content_type 'text/css', :charset => 'utf-8'
       cache scss(:"scss/#{params[:name].to_sym}")
     end
-    
+
   end
 end
