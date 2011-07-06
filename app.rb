@@ -5,7 +5,7 @@ ROOT = File.dirname(__FILE__)
 module Nesta
   class App
 
-    use Rack::Static, :urls => ["/assets"], :root => "themes/llex/public"
+    use Rack::Static, :urls => ["/assets"], :root => "public"
     
     def production?
       environment == :production
@@ -51,6 +51,13 @@ module Nesta
     get '/css/:name.css' do
       content_type 'text/css', :charset => 'utf-8'
       cache scss(:"scss/#{params[:name].to_sym}")
+    end
+
+    get '*.css' do
+      parts = params[:splat].map { |p| p.sub(/\/$/, '') }
+      
+      content_type 'text/css', :charset => 'utf-8'
+      cache scss(:"../content/pages#{File.join(parts)}")
     end
 
   end
