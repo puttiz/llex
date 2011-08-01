@@ -1,8 +1,11 @@
 !!! 5
 %html
   %head
-    = partial "work/head"
+    = partial "head"
   %body
-    = partial "work/header"
+    = partial "_work/header"
+
     = yield
-    = partial "work/footer"
+
+    = partial "_work/footer"
+    = partial "bottom"
