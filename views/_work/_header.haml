@@ -1,0 +1,7 @@
+%header.masthead(role="banner")
+  %hgroup
+    %h1
+      %a(href="/")= @heading
+    %h2= @subtitle
+  %nav
+    - display_menu(@menu_items, :levels => 1)

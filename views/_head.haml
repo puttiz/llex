@@ -24,9 +24,18 @@
 -# %link{:href => "/assets/i/icons/apple-touch-icon-nokia.png", :rel => "shortcut icon"}
 -# %link{:href => "/assets/i/icons/favicon.ico", :rel => "shortcut icon"}
 
+%link{:href => "/css/style.css", :rel => "stylesheet"}
 %link{:href => "./style.css", :rel => "stylesheet"}
 
 -# Modernizr is first. All other javascript has been placed in
 -# '/layouts/partials/_footer.haml' which is rendered right before
 -# the closing </body> tag
 %script{:src => "/assets/j/libs/modernizr.js"}
+
+-# If specifically building a mobile web app then uncomment
+-# %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}
+-# %meta{:content => "black", :name => "apple-mobile-web-app-status-bar-style"}
+-# %link{:href => "/assets/images/splash.png", :rel => "apple-touch-startup-image"}
+
+-# Mobile IE lets you turn on ClearType to make fonts smoother
+-# %meta{:content => "on", "http-equiv" => "cleartype"}

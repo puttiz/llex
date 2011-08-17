@@ -1,11 +1,13 @@
 !!! 5
-%html
+%html{:lang => "en", :class => "no-js"}
   %head
     = partial "head"
   %body
-    = partial "_work/header"
+    #container
+      = partial "_work/header"
 
-    = yield
+      #main(role="main")
+        = yield
 
-    = partial "_work/footer"
+      = partial "_work/footer"
     = partial "bottom"

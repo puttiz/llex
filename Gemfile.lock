@@ -43,6 +43,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass (= 0.11.5)
-  heroku (= 2.4.0)
-  nesta (= 0.9.5)
+  compass
+  haml
+  heroku
+  nesta
+  sass
