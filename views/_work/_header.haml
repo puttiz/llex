@@ -1,7 +1,9 @@
-%header.masthead(role="banner")
-  %hgroup
-    %h1
+/ masthead start
+#masthead(role="banner")
+  .row
+    .column.logo
       %a(href="/")= @heading
-    %h2= @subtitle
-  %nav
-    - display_menu(@menu_items, :levels => 1)
+      %span= @subtitle
+    .column.menu
+      - display_menu(@menu_items, :levels => 1)
+/ masthead end
