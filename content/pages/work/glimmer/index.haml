@@ -7,11 +7,63 @@ Class: glimmer
 / Glimmer for taobao start
 .hd
   / header
-  header
+  .topbar.sixteen.columns
+  .header.sixteen.columns.clearfix
+    .nav
+      %ul.nav-ul
+        %li.nav-li
+          %a.nav-link.active(href="./glimmer" title="Home") Home
+        %li.nav-li
+          %a.nav-link(href="./glimmer/list" title="Shop") Shop
+        %li.nav-li.logo
+          %a.nav-link(href="./glimmer/news" title="Blog") home
+        %li.nav-li
+          %a.nav-link(href="./glimmer/news" title="Blog") Blog
+        %li.nav-li
+          %a.nav-link(href="./glimmer/news" title="Blog") Blog
+
 .bg
   / body
-  body
+  .feature.sixteen.columns
+    .slide-nav
+      %a.prev2(href="#") <
+      %a.next2(href="#") >
+    .slideshow
+      %div
+        .dark
+          %ol
+            %li one
+            %li two
+        %img
+      %div
+        .light
+          %ol
+            %li one
+            %li two
+            %li three
+  .columns-primary
+    .panels
+      .panel
+        %a
+          %img
+      .panel
+        %a
+          %img
+    .panels
+      .panel
+        %a
+          %img
+      .panel
+        %a
+          %img
+    .panels
+      .panel
+        %a
+          %img
+      .panel
+        %a
+          %img
 .ft
   / footer
-  footer
+  .bottombar.sixteen.columns
 / Glimmer for taobao end

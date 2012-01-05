@@ -2,10 +2,10 @@
 %html{:lang => "en", :class => "no-js"}
   %head
     = partial "top"
-    %link{:href => "/css/work.css", :rel => "stylesheet"}
+    / %link{:href => "/css/work.css", :rel => "stylesheet"}
     %link{:href => "#{@page.abspath}/style.css", :rel => "stylesheet"}
   %body
-    #container
+    .container.content
       = partial "_work/header"
 
       #main(role="main")
