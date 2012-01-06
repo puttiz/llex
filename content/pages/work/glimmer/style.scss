@@ -1,15 +1,12 @@
 @import "base";
 @import "layout";
 
-$orange: #d93645;
+$orange: #f27b04;
 $white: #f6f5f0;
 $black: #292929;
 $blue: #12aee8;
 
-$default-text-shadow-color: rgba($black, 0.6);
-$default-text-shadow-blur: 0.5px;
-$default-text-shadow-v-offset: 0.5px;
-$default-text-shadow-h-offset: 0.5px;
+$assets: "/assets/glimmer/assets/images";
 
 // --- Layout ---
 
@@ -18,7 +15,7 @@ $default-text-shadow-h-offset: 0.5px;
 }
 
 .header {
-  padding: 20px 0 20px 0;
+  padding: 25px 0 25px 0;
 
   .nav {
     @include center;
@@ -34,16 +31,9 @@ $default-text-shadow-h-offset: 0.5px;
       padding: 0;
       margin: 0;
 
-      .logo {
-        .mark {
-          color: $orange;
-          font-size: 32px;
-        }
-      }
-
       .nav-li {
         display: inline-block;
-        padding: 0 25px 0;
+        padding: 0 25px 0 21px;
         margin: 0;
         position: relative;
         border: {
@@ -60,7 +50,6 @@ $default-text-shadow-h-offset: 0.5px;
           padding-right: 0;
           border-right: 0;
         }
-      }
 
         .nav-link {
           @include nav-link-font($black);
@@ -69,15 +58,43 @@ $default-text-shadow-h-offset: 0.5px;
             padding-bottom: 2px;
             border-bottom: 3px solid $blue;
           }
+        }
 
-          .active {
-            color: #444;
+        .active {
+          padding-bottom: 2px;
+          border-bottom: 3px solid $orange;
+        }
+
+        .browse {
+          @include nav-link-font($orange);
+          padding: 4px 26px 2px 25px;
+          border: 3px solid $orange;
+
+          &:hover {
+            color: $white;
+            background-color: $orange;
+            border: 3px solid $orange;
           }
         }
+
+        .logo {
+          padding: 50px 50px 32px 50px;
+          margin: 0;
+          background: url(#{$assets}/logo.png) 0 0 no-repeat;
+
+          &:hover {
+            padding: 50px;
+            border: 0;
+            background: url(#{$assets}/logo.png) 0 -102px no-repeat;
+          }
+        }
+      }
     }
   }
 
 }
+
+
 
 .bottombar{
   @include bar;
