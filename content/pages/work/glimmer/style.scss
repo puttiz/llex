@@ -2,11 +2,15 @@
 @import "layout";
 
 $orange: #f27b04;
-$white: #f6f5f0;
+$white: #ffffff;
 $black: #292929;
 $blue: #12aee8;
 
 $assets: "/assets/glimmer/assets/images";
+
+body {
+  background: url(#{$assets}/bg-repeat.png) repeat 0 0 #dfd5c9;
+}
 
 // --- Layout ---
 
@@ -16,6 +20,7 @@ $assets: "/assets/glimmer/assets/images";
 
 .header {
   padding: 25px 0 25px 0;
+  margin: 10px 0 0 0;
 
   .nav {
     @include center;
@@ -94,8 +99,61 @@ $assets: "/assets/glimmer/assets/images";
 
 }
 
+.feature {
+  .section {
+    clear: both;
+    margin: 12px 0;
+    overflow: hidden;
+  }
 
+  .slide {
+    height: 414px;
+//    background-color: $blue;
 
-.bottombar{
+    .slidenav {
+      position: absolute;
+      top: 335px;
+      left: 0px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      z-index: 1;
+      color: $white;
+
+      .prev {
+        float: left;
+        @include slide-arrow($black, $white, 40px 0px 0px 40px);
+        @include box-shadow(rgba($black,0.2) 1px 0px 1px 0 inset);
+
+        &:hover {
+          @include box-shadow(rgba($black,0.4) 1px 0px 1px 0 inset);
+        }
+      }
+
+      .next {
+        float: right;
+        @include slide-arrow($black, $white, 0px 40px 40px 0px);
+        @include box-shadow(rgba($black,0.2) -1px 0px 1px 0 inset);
+
+        &:hover {
+          @include box-shadow(rgba($black,0.4) -1px 0px 1px 0 inset);
+        }
+      }
+    }
+
+    .slideshow {
+      top: 0;
+      margin: 0 33px auto;
+      padding: 0;
+      border: 7px solid $white;
+      display: block;
+      overflow: hidden;
+      height: 400px;
+      z-index: 500;
+    }
+  }
+}
+
+.bottombar {
   @include bar;
 }
