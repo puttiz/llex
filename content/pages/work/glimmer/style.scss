@@ -159,10 +159,41 @@ body {
       .slideitem {
         .dark {
           @include slide-span-style($grey, $black, $bimg-dark);
+
+          .span-link {
+            @include slide-span-link($grey, $orange);
+          }
         }
         .light {
           @include slide-span-style($black, $white, $bimg-light);
+
+          .span-link {
+            @include slide-span-link($black, $blue);
+          }
         }
+
+        .span-ol {
+          margin: 0 0 8px 0;
+          padding: 0 0 0 25px;
+        }
+
+        .span-ul {
+          margin: 0 0 0 2px;
+          padding: 0;
+        }
+
+        .span-ol-li {
+          list-style-type: decimal;
+          margin: 5px 8px 2px 5px;
+          padding: 0;
+        }
+
+        .span-ul-li {
+          list-style-type: none;
+          margin: 0;
+          padding: 2px 2px 5px 2px;
+        }
+
         .lb {
           position: absolute;
           left: 20px;
