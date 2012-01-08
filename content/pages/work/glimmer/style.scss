@@ -1,12 +1,15 @@
 @import "base";
 @import "layout";
 
-$orange: #f27b04;
 $white: #ffffff;
+$grey: #f4f5f0;
 $black: #292929;
 $blue: #12aee8;
+$orange: #f27b04;
 
 $assets: "/assets/glimmer/assets/images";
+$bimg-dark: "#{$assets}/background1.jpg";
+$bimg-light: "#{$assets}/texture.png";
 
 body {
   background: url(#{$assets}/bg-repeat.png) repeat 0 0 #dfd5c9;
@@ -40,7 +43,7 @@ body {
         display: inline-block;
         padding: 0 25px 0 21px;
         margin: 0;
-        position: relative;
+//        position: relative;
         border: {
           color: lighten($black, 50%);
           top: 0;
@@ -108,11 +111,12 @@ body {
 
   .slide {
     height: 414px;
+    position: relative;
 //    background-color: $blue;
 
     .slidenav {
       position: absolute;
-      top: 335px;
+      top: 182px;
       left: 0px;
       width: 100%;
       margin: 0 auto;
@@ -142,6 +146,7 @@ body {
     }
 
     .slideshow {
+      position: relative;
       top: 0;
       margin: 0 33px auto;
       padding: 0;
@@ -150,6 +155,37 @@ body {
       overflow: hidden;
       height: 400px;
       z-index: 500;
+
+      .slideitem {
+        .dark {
+          @include slide-span-style($grey, $black, $bimg-dark);
+        }
+        .light {
+          @include slide-span-style($black, $white, $bimg-light);
+        }
+        .lb {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+        }
+        .lt {
+          position: absolute;
+          left: 20px;
+          top: 20px;
+        }
+        .rb {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+        }
+        .rt {
+          position: absolute;
+          right: 20px;
+          top: 20px;
+        }
+      }
+
+
     }
   }
 }

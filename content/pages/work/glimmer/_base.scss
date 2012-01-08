@@ -47,3 +47,13 @@
   }
   @include border-radius($radius);
 }
+
+@mixin slide-span-style($color, $bcolor, $bimg) {
+  color: $color;
+  background: $bcolor url($bimg) repeat;
+  margin: 0px;
+  padding: 7px 12px 5px 12px;
+  z-index: 400;
+  @include border-radius(6px);
+  @include box-shadow(rgba(0,0,0,0.8) 1px 1px 2px 0 inset);
+}

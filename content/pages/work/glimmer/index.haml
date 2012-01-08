@@ -4,9 +4,6 @@ Title: Glimmer @ Taobao
 Class: glimmer
 / Date: Jan 2012
 
-%script{:src => "http://a.tbcdn.cn/??s/kissy/1.1.6/seed-min.js,p/global/1.0/global-min.js,p/shop/1.0/shop-min.js?t=2011042120110214.js"}
-%script{:src => "/assets/glimmer/assets/kissy.js"}
-
 / Glimmer for taobao start
 .hd
   / header
@@ -27,16 +24,27 @@ Class: glimmer
   / header end
 .bg
   / body
-  .feature.sixteen.columns
+  .feature.sixteen.columns.clearfix
     .slide.section
       .slidenav
         %a.prev(href="#") <
         %a.next(href="#") >
-      %ul.slideshow
-        %li one
-        %li two
-        %li tree
-
+      .slideshow
+        .slideitem
+          %span.dark.lb
+            .ol
+              .li
+                %a(href="#") link 1
+              .li
+                %a(href="#") link 2
+          %span.light.rt
+            .ul
+              .li
+                %a(href="#") link 3
+              .li
+                %a(href="#") link 4
+          %img(src="/assets/glimmer/assets/images/slideshow.jpg")
+  / body end
 .ft
   / footer
   .bottombar.sixteen.columns
