@@ -1,6 +1,12 @@
 @import "compass/css3";
 //@import "compass/utilities/general/clearfix";
 
+@mixin section {
+  clear: both;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
 @mixin bar($radius: 2px) {
   background: lighten($black, 5%);
   width: 100%;

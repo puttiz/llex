@@ -17,13 +17,17 @@ body {
 
 // --- Layout ---
 
+.section {
+  @include section;
+}
+
 .topbar {
   @include bar(0 0 2px 2px);
 }
 
 .header {
-  padding: 25px 0 25px 0;
-  margin: 10px 0 0 0;
+  padding: 35px 0 25px 0;
+//  margin: 10px 0 0 0;
 
   .nav {
     @include center;
@@ -103,11 +107,6 @@ body {
 }
 
 .feature {
-  .section {
-    clear: both;
-    margin: 12px 0;
-    overflow: hidden;
-  }
 
   .slide {
     height: 414px;
@@ -159,14 +158,13 @@ body {
       .slideitem {
         .dark {
           @include slide-span-style($grey, $black, $bimg-dark);
-
           .span-link {
             @include slide-span-link($grey, $orange);
           }
         }
+
         .light {
           @include slide-span-style($black, $white, $bimg-light);
-
           .span-link {
             @include slide-span-link($black, $blue);
           }
@@ -215,9 +213,16 @@ body {
           top: 20px;
         }
       }
-
-
     }
+  }
+}
+
+.sub {
+  .panel {
+    border: 7px solid $white;
+    margin: 0 0 14px 0;
+    height: 380px;
+    background-color: $black;
   }
 }
 
