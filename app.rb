@@ -43,14 +43,14 @@ module Nesta
       # set :views, File.expand_path('scss', File.dirname(__FILE__))
     end
 
-    get '/css/local.css' do
-      content_type 'text/css', :charset => 'utf-8'
-      cache sass(:"scss/local")
-    end
+    # get '/css/local.css' do
+    #   content_type 'text/css', :charset => 'utf-8'
+    #   cache sass(:"scss/local")
+    # end
 
     get '/css/:name.css' do
       content_type 'text/css', :charset => 'utf-8'
-      cache scss(:"scss/#{params[:name].to_sym}")
+      cache scss(:"_scss/#{params[:name].to_sym}")
     end
 
     get '*.css' do

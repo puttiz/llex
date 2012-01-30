@@ -6,22 +6,7 @@ Class: glimmer
 
 / Glimmer for taobao start
 .hd
-  / header
-  .topbar.sixteen.columns
-  .header.sixteen.columns.clearfix
-    .nav
-      %ul.nav-ul
-        %li.nav-li
-          %a.nav-link.active(href="./glimmer/index" title="Home") Home
-        %li.nav-li
-          %a.logo(href="./glimmer/list" title="Shop")
-        %li.nav-li
-          %a.nav-link(href="./glimmer/news" title="Blog") home
-        %li.nav-li
-          %a.nav-link(href="./glimmer/news" title="Blog") Blog
-        %li.nav-li
-          %a.nav-link(href="./glimmer/news" title="Blog") Blog
-  / header end
+  = partial "_zine/glimmer/header"
 .bg
   / body
   .feature.sixteen.columns.clearfix
