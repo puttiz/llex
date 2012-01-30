@@ -3,7 +3,7 @@
 @import "partials/columns";
 //@import 'typography';
 
-$less-grid-element: unquote("#container") !default;
+$less-grid-element: unquote("#main") !default;
 $less-grid-padding: true !default;
 $less-font-family: Arial, sans-serif !default;
 
@@ -55,4 +55,3 @@ $less-font-family: Arial, sans-serif !default;
   #{$less-grid-element}
    { @include grid(5)}
 }
-

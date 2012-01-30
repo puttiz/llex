@@ -1,9 +1,8 @@
-source 'http://rubygems.org'
+source :gemcutter
 
-gem 'nesta', '0.9.5'
-gem 'compass', '0.11.4'
-gem 'heroku', '2.3.6'
+gem 'nesta'
+gem 'heroku'
 
-
-
-# gem (RUBY_VERSION =~ /^1.9/) ? 'ruby-debug19': 'ruby-debug'
+gem 'haml'
+gem 'sass'
+gem 'compass'
