@@ -9,10 +9,10 @@ Class: glimmer
   = partial "_zine/glimmer/header"
 .bg
   / body
-  .browsing.sixteen.columns
-    Browsing:
 
-    / = partial "top"
+  .browsing.sixteen.columns.clearfix
+
+    = partial "_zine/glimmer/dropmenu"
 
   .sub.section
     .one-third.column
@@ -35,6 +35,5 @@ Class: glimmer
         %span three
   / body end
 .ft
-  / footer
-  .bottombar.sixteen.columns
+  = partial "_zine/glimmer/footer"
 / Glimmer for taobao end

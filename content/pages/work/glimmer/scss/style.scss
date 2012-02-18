@@ -26,8 +26,7 @@ body {
 }
 
 .header {
-  padding: 35px 0 25px 0;
-//  margin: 10px 0 0 0;
+  padding: 35px 0;
 
   .nav {
     @include center;
@@ -217,12 +216,82 @@ body {
   }
 }
 
+.browsing {
+  padding: 10px 0 0 0;
+
+  .nav {
+    @include center;
+//    margin: 20px auto 0;
+    display: block;
+//    min-height: 35px;
+//    padding: 10px 0 0;
+
+    .head {
+      font: {
+        family: Times New Roman, Times, Serif;
+        style: italic;
+      }
+      color: #918277;
+    }
+
+    .nav-ul {
+      @include center;
+      display: block;
+      border: none;
+      padding: 0;
+      margin: 15px 0;
+
+      .nav-li {
+        display: inline-block;
+        position: relative;
+//        padding: 12px 0;
+//        margin: 0;
+
+        .nav-link {
+          display: block;
+          @include nav-link-font($black);
+          letter-spacing: 2px;
+          font: {
+            size: 20px;
+            weight: 700;
+          };
+          padding: 7px 4px 5px 4px;
+          border: 4px solid $black;
+          width: 220px;
+
+          &:hover {
+            @extend .nav-link;
+            color: $white;
+            background: $black;
+          }
+        }
+
+        &:hover > .sub-ul {
+          display: block;
+        }
+
+        .sub-ul {
+          background: $black;
+//          display: none;
+          position: absolute;
+          top: 40px;
+          left: -360px; // TODO: @media
+
+          height: 335px;
+        }
+      }
+    }
+  }
+
+}
+
 .sub {
   .panel {
     border: 7px solid $white;
     margin: 0 0 14px 0;
     height: 380px;
     background-color: $black;
+    @include box-shadow(rgba($black,0.4) 1px 1px 1px 0);
   }
 }
 
