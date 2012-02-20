@@ -7,6 +7,8 @@ module Nesta
 
     use Rack::Static, :urls => ["/assets"], :root => "public"
     
+    # set :environment, :production
+    
     def production?
       environment == :production
     end

@@ -7,14 +7,14 @@
   overflow: hidden;
 }
 
-@mixin bar($radius: 2px) {
-  background: lighten($black, 5%);
-  width: 100%;
+@mixin bar($bcolor, $bimg, $radius: 2px) {
+  background: lighten($bcolor, 5%) url($bimg) repeat;
+//  width: 100%;
   height: 6px;
   margin-top: 0px;
   top: 0;
   @include border-radius($radius);
-  @include rotate(.1deg);
+//  @include rotate(.1deg);
 }
 
 @mixin center {
