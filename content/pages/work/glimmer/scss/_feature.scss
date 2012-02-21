@@ -1,0 +1,110 @@
+.feature {
+
+  .slide {
+    height: 414px;
+    position: relative;
+//    background-color: $blue;
+
+    .slidenav {
+      position: absolute;
+      top: 182px;
+      left: 0px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      z-index: 1;
+      color: $white;
+
+      .prev {
+        float: left;
+        @include slide-arrow($black, $white, 40px 0px 0px 40px);
+        @include box-shadow(rgba($black,0.2) 1px 0px 1px 0 inset);
+
+        &:hover {
+          @include box-shadow(rgba($black,0.4) 1px 0px 1px 0 inset);
+        }
+      }
+
+      .next {
+        float: right;
+        @include slide-arrow($black, $white, 0px 40px 40px 0px);
+        @include box-shadow(rgba($black,0.2) -1px 0px 1px 0 inset);
+
+        &:hover {
+          @include box-shadow(rgba($black,0.4) -1px 0px 1px 0 inset);
+        }
+      }
+    }
+
+    .slideshow {
+      position: relative;
+      top: 0;
+      margin: 0 33px auto;
+      padding: 0;
+      border: 7px solid $white;
+      display: block;
+      overflow: hidden;
+      height: 400px;
+      z-index: 500;
+
+      .slideitem {
+        .dark {
+          @include slide-span-style($grey, $black, $bimg-dark);
+          .span-link {
+            @include slide-span-link($grey, $orange);
+          }
+        }
+
+        .light {
+          @include slide-span-style($black, $white, $bimg-light);
+          .span-link {
+            @include slide-span-link($black, $blue);
+          }
+        }
+
+        .span-ol {
+          margin: 0 0 8px 0;
+          padding: 0 0 0 25px;
+        }
+
+        .span-ul {
+          margin: 0 0 0 2px;
+          padding: 0;
+        }
+
+        .span-ol-li {
+          list-style-type: decimal;
+          margin: 5px 8px 2px 5px;
+          padding: 0;
+        }
+
+        .span-ul-li {
+          list-style-type: none;
+          margin: 0;
+          padding: 2px 2px 5px 2px;
+        }
+
+        .lb {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+        }
+        .lt {
+          position: absolute;
+          left: 20px;
+          top: 20px;
+        }
+        .rb {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+        }
+        .rt {
+          position: absolute;
+          right: 20px;
+          top: 20px;
+        }
+      }
+    }
+  }
+}

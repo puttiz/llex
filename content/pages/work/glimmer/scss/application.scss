@@ -1,0 +1,43 @@
+$white: #ffffff;
+$grey: #f4f5f0;
+$black: #292929;
+$blue: #12aee8;
+$orange: #f27b04;
+
+$assets: "/assets/glimmer/assets/images";
+$bimg-dark: "#{$assets}/background1.jpg";
+$bimg-light: "#{$assets}/texture.png";
+
+@import "base";
+@import "header";
+@import "feature";
+@import "browsing";
+
+body {
+  background: url(#{$assets}/bg-repeat.png) repeat 0 0 #dfd5c9;
+}
+
+// --- Layout ---
+
+.section {
+//  @include section;
+}
+
+.topbar {
+  @include bar($black, $bimg-dark, 0 0 2px 2px);
+}
+
+
+.sub {
+  .panel {
+    border: 7px solid $white;
+    margin: 0 0 14px 0;
+    height: 380px;
+    background-color: $black;
+    @include box-shadow(rgba($black,0.4) 1px 1px 1px 0);
+  }
+}
+
+.bottombar {
+  @include bar($black, $bimg-dark, 2px 2px 0 0);
+}

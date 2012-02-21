@@ -1,4 +1,5 @@
 require "compass"
+require 'compass_twitter_bootstrap'
 
 ROOT = File.dirname(__FILE__)
 
