@@ -2,7 +2,7 @@
   padding: 10px 0 0 0;
 
   .nav {
-    @include center;
+//    @include center;
 //    margin: 20px auto 0;
     display: block;
 //    min-height: 35px;
@@ -17,7 +17,7 @@
     }
 
     .nav-ul {
-      @include center;
+//      @include center;
       display: block;
       border: none;
       padding: 0;

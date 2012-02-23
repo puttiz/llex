@@ -1,78 +1,54 @@
 .header {
-  padding: 35px 0;
+  padding: 18px 0 0;
 
-  .nav {
-    @include center;
-    margin: 20px auto 0;
-    display: block;
-    min-height: 35px;
-    padding: 10px 0 0;
+  h1 {
+    padding: 0px;
+    margin: 0;
+    text-indent: -900%;
+    width: 105px;
+    height: 100px;
+    background: url(#{$assets}/logo.png) 0 0 no-repeat;
 
-    .nav-ul {
-      @include center;
-      display: block;
-      border: none;
-      padding: 0;
-      margin: 0;
+    &:hover {
+      border: 0;
+      background: url(#{$assets}/logo.png) 0 -102px no-repeat;
+    }
+  }
 
-      .li {
-        display: inline-block;
-        padding: 0 25px 0 21px;
-        margin: 0;
-//        position: relative;
-        border: {
-          color: lighten($black, 50%);
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 1px solid lighten($black, 50%);
-        }
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-          border-right: 0;
-        }
+  .mastnav {
 
-        .link {
-          @include nav-link-font($black);
+      .nav {
+//        width: auto;
+        padding: 40px 0 0;
 
-          &:hover {
-            padding-bottom: 2px;
-            border-bottom: 3px solid $blue;
+        > li {
+          display: inline-block;
+          padding: 0 25px 0 21px;
+          margin: 0;
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+            border-right: 0;
+          }
+
+          > a {
+            @include nav-link-font($black);
+
+            &:hover, &:focus {
+              padding-bottom: 2px;
+              border-bottom: 3px solid $blue;
+            }
           }
         }
 
-        .active {
+        .active > a {
           padding-bottom: 2px;
           border-bottom: 3px solid $orange;
         }
 
-        .browse {
-          @include nav-link-font($orange);
-          padding: 4px 26px 2px 25px;
-          border: 3px solid $orange;
-
-          &:hover {
-            color: $white;
-            background-color: $orange;
-            border: 3px solid $orange;
-          }
-        }
-
-        .logo {
-          padding: 50px 50px 32px 50px;
-          margin: 0;
-          background: url(#{$assets}/logo.png) 0 0 no-repeat;
-
-          &:hover {
-            padding: 50px;
-            border: 0;
-            background: url(#{$assets}/logo.png) 0 -102px no-repeat;
-          }
-        }
       }
-    }
+
   }
 }

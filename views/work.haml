@@ -5,11 +5,10 @@
     %link{:href => "/css/work.css", :rel => "stylesheet"}
     %link{:href => "#{@page.abspath}.css", :rel => "stylesheet"}
   %body
-    .container.content
-      = partial "_work/header"
+    = partial "_work/header"
 
-      #main(role="main")
-        = yield
+    #main.container(role="main")
+      = yield
 
-      = partial "_work/footer"
-    = partial "_/bottom"
+    = partial "_work/footer"
+  = partial "_/bottom"

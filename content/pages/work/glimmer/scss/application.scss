@@ -27,7 +27,6 @@ body {
   @include bar($black, $bimg-dark, 0 0 2px 2px);
 }
 
-
 .sub {
   .panel {
     border: 7px solid $white;
