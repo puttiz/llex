@@ -12,11 +12,6 @@
   @include box-shadow($shadow);
 }
 
-//@mixin center {
-//  text-align: center;
-//  margin: 0px auto;
-//}
-
 @mixin nav-link-font($color) {
   color: $color;
   background: none;
@@ -64,7 +59,7 @@
 @mixin slide-span-link($color, $lcolor) {
   color: $color;
   text-decoration: none;
-  padding-bottom: 0px;
+  padding-bottom: 2px;
   &:hover {
     border-bottom: 2px solid $lcolor;
   }

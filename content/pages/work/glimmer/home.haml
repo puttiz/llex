@@ -11,39 +11,50 @@ Class: glimmer
 .hd
   = partial "_zine/glimmer/header"
 .bg
-  / body
-  .feature.sixteen.columns.clearfix
-    .slide.section
-      .slidenav
-        %a.prev(href="#") <
-        %a.next(href="#") >
-      .slideshow
-        .slideitem
-          %span.dark.lb
-            %ol.span-ol
-              %li.span-ol-li
-                %a.span-link(href="#") link 1
-              %li.span-ol-li
-                %a.span-link(href="#") link 2 long long long long
-          %span.light.rt
-            %ul.span-ul
-              %li.span-ul-li
-                %a.span-link(href="#") link 3
-              %li.span-ul-li
-                %a.span-link(href="#") link 4 long long long long
+  /
+    Feature
+    ============================================================================
+  .feature
+    .carousel.slide.container
+      .carousel-inner
+        .item.active
           %img(src="/assets/glimmer/assets/images/slideshow.jpg")
-  .sub.section
+          %span.dark.lb
+            %ol
+              %li
+                %a(href="#") link 1
+              %li
+                %a(href="#") link 2 long long long long
+          %span.light.rt
+            %ul
+              %li
+                %a(href="#") link 3
+              %li
+                %a(href="#") link 4 long long long long
+      %a.prev.arrow(href="#myCarousel" date-slide="prev") ‹
+      %a.next.arrow(href="#myCarousel" date-slide="next") ›
+  /
+    Marketing
+    ============================================================================
+  .marketing
     .row
-      .one-third.column
-        .panel
-          %span one
-      .one-third.column
-        .panel
-          %span two
-      .one-third.column
-        .panel
-          %span three
-  / body end
+      .span4
+        %h2 one
+        %p something
+      .span4
+        %h2 one
+        %p something
+      .span4
+        %h2 one
+        %p something
+      .span4
+        %h2 one
+        %p something
+      .span4
+        %h2 one
+        %p something
+
+  / /marketing
 .ft
   = partial "_zine/glimmer/footer"
 /
