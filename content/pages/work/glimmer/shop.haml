@@ -4,13 +4,16 @@ Title: Glimmer @ Taobao
 Class: glimmer
 / Date: Jan 2012
 
-/ Glimmer for taobao start
+/
+  Glimmer for taobao start
+  ============================================================================
 .hd
   = partial "_zine/glimmer/header"
 .bg
-  / body
-
-  .browsing.sixteen.columns.clearfix
+  /
+    Browsing
+    ============================================================================
+  .browsing
 
     = partial "_zine/glimmer/dropmenu"
 
@@ -19,28 +22,16 @@ Class: glimmer
     ============================================================================
   .marketing
     %ul.thumbnails
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
+      - (1...10).each do
+        %li.span3
+          .thumbnail.f
+            %img(src="http://placehold.it/204x122")
+            %h4 label
+            %p caption
 
   / /marketing
 .ft
   = partial "_zine/glimmer/footer"
-/ Glimmer for taobao end
+/
+  Glimmer for taobao end
+  ============================================================================

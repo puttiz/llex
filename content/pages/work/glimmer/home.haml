@@ -38,26 +38,12 @@ Class: glimmer
     ============================================================================
   .marketing
     %ul.thumbnails
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
-      %li.span4
-        .thumbnail.f
-          %img(src="http://placehold.it/300x180")
-          %h4 label
-          %p caption
+      - (1...8).each do
+        %li.span4
+          .thumbnail.f
+            %img(src="http://placehold.it/284x170")
+            %h4 label
+            %p caption
 
   / /marketing
 .ft
