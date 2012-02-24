@@ -2,18 +2,18 @@
   .slide {
 //    width: 940px;
     width: 900px;
-    height: 416px;
+    height: 400px;
     position: relative;
     padding: 7px;
     background: rgba($white,0.3) url($bimg-light) repeat 0 0;
-    border: 1px solid lighten($black, 60%);
+    border: 1px solid lighten($black, 50%);
     @include box-shadow(1px 1px 15px rgba($black, .3));
 
     .arrow {
       position: absolute;
       top: 50%;
-      left: -40px;
-      width: 40px;
+      left: -30px;
+      width: 30px;
       height: 40px;
       margin-top: -20px;
       font-size: 60px;
@@ -28,7 +28,7 @@
       }
       &.next {
         left: auto;
-        right: -42px;
+        right: -30px;
       }
     }
 
