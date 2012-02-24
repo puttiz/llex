@@ -4,43 +4,50 @@ Title: Glimmer @ Taobao
 Class: glimmer
 / Date: Jan 2012
 
-/ Glimmer for taobao start
+
+/
+  Glimmer for taobao start
+  ============================================================================
 .hd
   = partial "_zine/glimmer/header"
 .bg
-  / body
-  .feature.sixteen.columns.clearfix
-    .slide.section
-      .slidenav
-        %a.prev(href="#") <
-        %a.next(href="#") >
-      .slideshow
-        .slideitem
+  /
+    Feature
+    ============================================================================
+  .feature
+    .carousel.slide.container
+      .carousel-inner
+        .item.active
+          %img(src="http://placehold.it/900x400")
           %span.dark.lb
-            %ol.span-ol
-              %li.span-ol-li
-                %a.span-link(href="#") link 1
-              %li.span-ol-li
-                %a.span-link(href="#") link 2 long long long long
+            %ol
+              %li
+                %a(href="#") link 1
+              %li
+                %a(href="#") link 2 long long long long
           %span.light.rt
-            %ul.span-ul
-              %li.span-ul-li
-                %a.span-link(href="#") link 3
-              %li.span-ul-li
-                %a.span-link(href="#") link 4 long long long long
-          %img(src="/assets/glimmer/assets/images/slideshow.jpg")
-  .sub.section
-    .row
-      .one-third.column
-        .panel
-          %span one
-      .one-third.column
-        .panel
-          %span two
-      .one-third.column
-        .panel
-          %span three
-  / body end
+            %ul
+              %li
+                %a(href="#") link 3
+              %li
+                %a(href="#") link 4 long long long long
+      %a.prev.arrow(href="#myCarousel" date-slide="prev") ‹
+      %a.next.arrow(href="#myCarousel" date-slide="next") ›
+  /
+    Marketing
+    ============================================================================
+  .marketing
+    %ul.thumbnails
+      - (1...8).each do
+        %li.span4
+          .thumbnail.f
+            %img(src="http://placehold.it/284x170")
+            %h4 label
+            %p caption
+
+  / /marketing
 .ft
   = partial "_zine/glimmer/footer"
-/ Glimmer for taobao end
+/
+  Glimmer for taobao end
+  ============================================================================

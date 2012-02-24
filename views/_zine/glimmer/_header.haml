@@ -1,16 +1,21 @@
-/ header
-.topbar.sixteen.columns
-.header.sixteen.columns.clearfix
-  .nav
-    %ul.nav-ul
-      %li.li
-        %a.link.active(href="#{@page.abspath}/../home" title="Home") Home
-      %li.li
-        %a.logo(href="./glimmer/list" title="Shop")
-      %li.li
-        %a.link(href="#{@page.abspath}/../shop" title="Blog") Shop
-      %li.li
-        %a.link(href="./glimmer/news" title="Blog") Blog
-      %li.li
-        %a.link(href="./glimmer/news" title="Blog") Blog
-/ header end
+.topbar
+/
+  Masthead
+  ============================================================================
+.header.row
+  .span2.offset1
+    %h1 Glimmer
+    %p.lead
+  .mastnav.span8
+    %ul.nav
+      %li.active
+        %a(href="#{@page.abspath}/../home" title="Home") Home
+      %li
+        %a(href="#{@page.abspath}/../shop" title="Shop") Shop
+      %li
+        %a(href="#{@page.abspath}/../collections" title="collections") Collections
+      %li
+        %a(href="#{@page.abspath}/../blog" title="Blog") Blog
+      %li
+        %a(href="#{@page.abspath}/../contact" title="Contact") Information
+
