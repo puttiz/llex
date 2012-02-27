@@ -1,4 +1,4 @@
-.browsing {
+.browsing, .search {
   margin-bottom: $baseLineHeight;
 
   h2 {
@@ -35,32 +35,39 @@
         &:hover {
           @extend .nav-link;
           color: $white;
-//          background: lighten($black, 5%);
           background: lighten($black, 5%) url($bimg-dark) repeat;
         }
-
       }
 
-      &:hover > .drop-ul {
+      &:hover > .dropdown {
         display: block;
-      }
-
-//        &:focus > .drop-ul {
-//          display: block;
-//        }
-
-      .drop-ul {
-        @include bar($black, $bimg-dark, 4px 4px 0 0);
-        @include box-shadow(rgba(0,0,0,0.32) 0 0 10px);
-//        display: none;
-        position: absolute;
-        padding: 0px;
-        top: 40px;
-        left: -$gridGutterWidth; // TODO: @media
-
-        height: 320px;
       }
     }
   }
+  .dropdown {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    top: 38px;
+    left: 0px;
+  }
 
+  .navbar-inner {
+    padding: 20px 20px 0 20px;
+    @include bar($black, $bimg-dark, 4px 4px 0 0);
+    height: auto;
+    @include box-shadow(rgba(0,0,0,0.32) 0 0 10px);
+
+    .container {
+      width: 900px;
+    }
+  }
+
+  .span {
+    width: 164px;
+  }
+
+  .thumbnail {
+    border: 2px solid $white;
+  }
 }

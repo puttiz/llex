@@ -1,13 +1,16 @@
 .container
-  %h2 Browsing:
+  %h2= @page.metadata('label') + ':'
   %ul.nav
     %li.span4.offset4
-      %a(href="#") All Items
-      .drop-ul.span12
-        %ul.thumbnails
-          - (1...10).each do
-            %li.span2
-              .thumbnail.f
-                %img(src="http://placehold.it/204x122")
-                %h4 label
-                %p caption
+      %a(href="#")= @page.metadata('title')
+      .dropdown.navbar
+        .navbar-inner
+          .container
+            - if @page.metadata('label') == 'search'
+              %h2 search
+            - else
+              %ul.thumbnails
+                - (1...10).each do
+                  %li.span
+                    %a.thumbnail(href="#")
+                      %img(src="http://placehold.it/164x164")
