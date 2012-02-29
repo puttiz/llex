@@ -69,5 +69,9 @@
 
   .thumbnail {
     border: 2px solid $white;
+
+    &:hover > img {
+//      background: $blue;
+    }
   }
 }
