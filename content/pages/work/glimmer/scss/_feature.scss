@@ -34,16 +34,16 @@
 
     .item {
       .dark {
-        @include slide-span-style($grey, $black, $bimg-dark);
+        @include slide-span-style($grayLighter, $black, $bimg-dark);
         a {
-          @include slide-span-link($grey, $orange);
+          @include slide-span-link($grayLighter, $orange);
         }
       }
 
       .light {
-        @include slide-span-style($black, $white, $bimg-light);
+        @include slide-span-style($grayDarker, $white, $bimg-light);
         a {
-          @include slide-span-link($black, $blue);
+          @include slide-span-link($grayDarker, $blue);
         }
       }
 

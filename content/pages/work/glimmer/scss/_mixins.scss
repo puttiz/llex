@@ -1,12 +1,15 @@
+// Top bottom bar
 
-@import "compass/css3";
-@import "compass_twitter_bootstrap";
-//@import "compass/utilities/general/clearfix";
+//
+// @TODO: Add docs to background-img!
+//
+@mixin background-img($bcolor, $bimg) {
+  background: lighten($bcolor, 5%) url($bimg) repeat;
+}
 
-@mixin bar($bcolor, $bimg, $radius: 2px) {
+@mixin bar($bcolor, $radius: 2px) {
   @extend .navbar-inner;
   height: 6px;
-  background: lighten($bcolor, 5%) url($bimg) repeat;
   @include border-radius($radius);
   $shadow: 0 1px 1px rgba($bcolor, .25), inset 0 -1px 0 rgba($bcolor, .1);
   @include box-shadow($shadow);
@@ -19,11 +22,6 @@
   text: {
     transform: uppercase;
     decoration: none;
-  }
-  font: {
-    family: Droid Sans;
-    weight: bold;
-    size: 14px;
   }
   @include text-shadow(rgba($color,0.1) -1px 0, rgba($color,0.1) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba($color,0.1) -1px -1px);
   @include border-radius(0);

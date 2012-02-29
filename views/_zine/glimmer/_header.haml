@@ -1,21 +1,17 @@
-.topbar
+.topbar.bar-dark
 /
   Masthead
   ============================================================================
 .header.row
   .span2.offset1
-    %h1 Glimmer
+    %h1.logo Glimmer
     %p.lead
   .mastnav.span8
     %ul.nav
-      %li.active
-        %a(href="#{@page.abspath}/../home" title="Home") Home
-      %li
-        %a(href="#{@page.abspath}/../shop" title="Shop") Shop
-      %li
-        %a(href="#{@page.abspath}/../collections" title="collections") Collections
-      %li
-        %a(href="#{@page.abspath}/../blog" title="Blog") Blog
-      %li
-        %a(href="#{@page.abspath}/../contact" title="Contact") Information
-
+      - ['home', 'shop', 'collections', 'blog', 'contact'].each do |i|
+        - if @page.metadata('url').downcase == i
+          %li.active
+            %a(href="#{@page.abspath}/../#{i}")= i
+        - else
+          %li
+            %a(href="#{@page.abspath}/../#{i}")= i

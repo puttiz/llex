@@ -7,18 +7,11 @@
     text-indent: -900%;
     width: 105px;
     height: 100px;
-    background: url(#{$assets}/logo.png) 0 0 no-repeat;
-
-    &:hover {
-      border: 0;
-      background: url(#{$assets}/logo.png) 0 -102px no-repeat;
-    }
   }
 
   .mastnav {
 
       .nav {
-//        width: auto;
         padding: 40px 0 0;
 
         > li {
@@ -32,22 +25,7 @@
             padding-right: 0;
             border-right: 0;
           }
-
-          > a {
-            @include nav-link-font($black);
-
-            &:hover, &:focus {
-              padding-bottom: 2px;
-              border-bottom: 3px solid $blue;
-            }
-          }
         }
-
-        .active > a {
-          padding-bottom: 2px;
-          border-bottom: 3px solid $orange;
-        }
-
       }
 
   }

@@ -1,0 +1,11 @@
+h1, h2, h3 {
+  font-family: $headFontFamily;
+}
+
+.mastnav a {
+  font: {
+    family: $headFontFamily;
+    weight: normal;
+    size: 16px;
+  }
+}

@@ -1,21 +1,15 @@
-$white: #ffffff;
-$grey: #f4f5f0;
-$black: #292929;
-$blue: #12aee8;
-$orange: #f27b04;
-
-$linkColor: $blue;
-$infoText: $blue;
-
-$assets: "/assets/glimmer/assets/images";
-$bimg-dark: "#{$assets}/background1.jpg";
-$bimg-light: "#{$assets}/texture.png";
-
-@import "base";
+// Core variables and mixins
+@import "variables";
+@import "compass_twitter_bootstrap";
+@import "compass";
+@import "mixins";
+@import "custom";
+// Partials
+@import "type";
 @import "header";
-@import "feature";
-@import "browsing";
-@import "marketing";
+//@import "feature";
+//@import "browsing";
+//@import "marketing";
 
 body {
   background: url(#{$assets}/bg-repeat.png) repeat 0 0 #dfd5c9;
@@ -23,24 +17,26 @@ body {
 
 // --- Layout ---
 
-.section {
-//  @include section;
-}
+//.section {
+//  @extend .container;
+//  width: auto;
+//  @include center-block;
+//}
 
 .topbar {
-  @include bar($black, $bimg-dark, 0 0 2px 2px);
+  @include bar($black, 0 0 2px 2px);
 }
 
-.sub {
-  .panel {
-    border: 7px solid $white;
-    margin: 0 0 14px 0;
-    height: 380px;
-    background-color: $black;
-    @include box-shadow(rgba($black,0.4) 1px 1px 1px 0);
-  }
-}
+//.sub {
+//  .panel {
+//    border: 7px solid $white;
+//    margin: 0 0 14px 0;
+//    height: 380px;
+//    background-color: $black;
+//    @include box-shadow(rgba($black,0.4) 1px 1px 1px 0);
+//  }
+//}
 
 .bottombar {
-  @include bar($black, $bimg-dark, 2px 2px 0 0);
+  @include bar($black, 2px 2px 0 0);
 }
