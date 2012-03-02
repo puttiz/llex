@@ -1,0 +1,16 @@
+.topbar.bar.dark
+/
+  Masthead
+  ============================================================================
+.header.container
+  .span2.offset1
+    %h1.logo Glimmer
+    %p.lead
+  .mastnav.span8
+    %ul.nav
+      - ['home', 'shop', 'collections', 'blog', 'contact'].each do |i|
+        %li
+          - if @page.metadata('url').downcase == i
+            %a.active(href="#{@page.abspath}/../#{i}")= i
+          - else
+            %a(href="#{@page.abspath}/../#{i}")= i

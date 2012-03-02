@@ -1,7 +1,9 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'rack-livereload'
 
 Bundler.require(:default)
+use Rack::LiveReload
 
 require 'nesta/app'
 

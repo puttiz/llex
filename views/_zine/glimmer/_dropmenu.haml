@@ -1,0 +1,16 @@
+.container
+  %h2= @page.metadata('label') + ':'
+  %ul.nav
+    %li.span4.offset4
+      %a.dropdown-toggle(href="#")= @page.metadata('title')
+      .dropdown.navbar
+        .navbar-inner.box.dark
+          .container
+            - if @page.metadata('label') == 'search'
+              %h2 search
+            - else
+              %ul.thumbnails
+                - (0...5).each do
+                  %li.span
+                    %a.thumbnail(href="#")
+                      %img(src="http://placehold.it/164x164")

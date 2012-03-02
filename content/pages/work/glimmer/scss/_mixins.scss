@@ -1,0 +1,47 @@
+// Top bottom bar
+
+//
+// @TODO: Add docs to background-img!
+//
+@mixin background-img($bcolor, $bimg) {
+  background: lighten($bcolor, 5%) url($bimg) repeat;
+}
+
+@mixin bar($bcolor, $radius: 2px) {
+  @extend .navbar-inner;
+  height: 6px;
+  @include border-radius($radius);
+  $shadow: 0 1px 1px rgba($bcolor, .25), inset 0 -1px 0 rgba($bcolor, .1);
+  @include box-shadow($shadow);
+}
+
+@mixin nav-link-font($color) {
+  color: $color;
+  background: none;
+  letter-spacing: 0px;
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
+  @include text-shadow(rgba($color,0.1) -1px 0, rgba($color,0.1) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba($color,0.1) -1px -1px);
+  @include border-radius(0);
+}
+
+@mixin slide-span-style($color, $bcolor, $bimg) {
+  color: $color;
+  background: $bcolor url($bimg) repeat;
+  margin: 0px;
+  padding: 7px 12px 5px 12px;
+  z-index: 400;
+  @include border-radius(6px);
+  @include box-shadow(rgba(0,0,0,0.8) 1px 1px 2px 0 inset);
+}
+
+@mixin slide-span-link($color, $lcolor) {
+  color: $color;
+  text-decoration: none;
+  padding-bottom: 2px;
+  &:hover {
+    border-bottom: 2px solid $lcolor;
+  }
+}

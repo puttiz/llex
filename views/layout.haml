@@ -21,9 +21,9 @@
     /[if lt IE 9]
       %script{src: "//html5shim.googlecode.com/svn/trunk/html5.js"}
     %link(href="/articles.xml" rel="alternate" type="application/atom+xml")
-    = partial :analytics
+    = partial "_/analytics"
   %body{class: @page.metadata('class')? @page.metadata('class') : @page.heading}
     #container
-      = partial :header
+      = partial "_/header"
       = yield
-      = partial :footer
+      = partial "_/footer"

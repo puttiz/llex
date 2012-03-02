@@ -1,0 +1,66 @@
+.feature {
+  .slide {
+    width: 900px;
+    height: 400px;
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      width: 30px;
+      height: 40px;
+      margin-top: -20px;
+      text-align: center;
+
+      &.next {
+        left: auto;
+        right: -30px;
+      }
+    }
+
+    .item {
+
+      ol {
+        margin: 0 0 8px 0;
+        padding: 0 0 0 25px;
+        list-style-type: decimal;
+        > li {
+          margin: 5px 8px 2px 5px;
+          padding: 0;
+        }
+      }
+
+      ul {
+        margin: 0 0 0 2px;
+        padding: 0;
+        list-style-type: none;
+        > li {
+          margin: 0;
+          padding: 2px 2px 5px 2px;
+        }
+      }
+
+      .lb {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+      }
+      .lt {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+      }
+      .rb {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+      .rt {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+  }
+}

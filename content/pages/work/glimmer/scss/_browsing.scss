@@ -1,0 +1,66 @@
+.browsing, .search {
+  margin-bottom: $baseLineHeight;
+
+  .nav {
+    display: block;
+    border: none;
+    text-align: center;
+    position: relative;
+
+    > li {
+
+      > a {
+        display: block;
+        @include nav-link-font($black);
+        letter-spacing: 2px;
+        font: {
+          size: 20px;
+          weight: 700;
+        };
+        padding: 7px 4px 5px 4px;
+        border: 4px solid lighten($black, 20%);
+        @include border-radius(3px);
+
+        &:hover {
+          @extend .nav-link;
+          color: $white;
+          background: lighten($black, 20%) url($darkBackgroundPath) repeat;
+        }
+      }
+
+      &:hover > .dropdown {
+        display: block;
+      }
+    }
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    top: 38px;
+    left: 0px;
+  }
+
+  .navbar-inner {
+    padding: 20px 20px 0 20px;
+    @include bar($black, 4px 4px 0 0);
+    height: auto;
+    @include box-shadow(rgba(0,0,0,0.32) 0 0 10px);
+
+    .container {
+      width: 900px;
+    }
+  }
+
+  .span {
+    width: 164px;
+  }
+
+  .thumbnail {
+    border: 2px solid $white;
+
+    &:hover > img {
+//      background: $blue;
+    }
+  }
+}
