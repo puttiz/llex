@@ -1,17 +1,6 @@
 .browsing, .search {
   margin-bottom: $baseLineHeight;
 
-  h2 {
-    font: {
-      family: Times New Roman, Times, Serif;
-      style: italic;
-      size: 13px;
-      weight: normal;
-    }
-    color: #918277;
-    text-align: center;
-  }
-
   .nav {
     display: block;
     border: none;
@@ -29,13 +18,13 @@
           weight: 700;
         };
         padding: 7px 4px 5px 4px;
-        border: 4px solid lighten($black, 5%);
+        border: 4px solid lighten($black, 20%);
         @include border-radius(3px);
 
         &:hover {
           @extend .nav-link;
           color: $white;
-          background: lighten($black, 5%) url($bimg-dark) repeat;
+          background: lighten($black, 20%) url($darkBackgroundPath) repeat;
         }
       }
 
@@ -54,7 +43,7 @@
 
   .navbar-inner {
     padding: 20px 20px 0 20px;
-    @include bar($black, $bimg-dark, 4px 4px 0 0);
+    @include bar($black, 4px 4px 0 0);
     height: auto;
     @include box-shadow(rgba(0,0,0,0.32) 0 0 10px);
 

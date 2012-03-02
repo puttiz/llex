@@ -2,9 +2,9 @@
   %h2= @page.metadata('label') + ':'
   %ul.nav
     %li.span4.offset4
-      %a(href="#")= @page.metadata('title')
+      %a.dropdown-toggle(href="#")= @page.metadata('title')
       .dropdown.navbar
-        .navbar-inner
+        .navbar-inner.box.dark
           .container
             - if @page.metadata('label') == 'search'
               %h2 search

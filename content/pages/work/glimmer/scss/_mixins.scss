@@ -27,23 +27,6 @@
   @include border-radius(0);
 }
 
-@mixin slide-arrow($color, $bcolor, $radius) {
-  color: $color;
-  width: 50px;
-  padding-bottom: 8px;
-  text-align: center;
-  background-color: rgba($bcolor,1.0);
-  text: {
-    transform: uppercase;
-    decoration: none;
-  }
-  font: {
-    family: "neuzon-1", "neuzon-2", sans-serif;
-    size: 62px;
-  }
-  @include border-radius($radius);
-}
-
 @mixin slide-span-style($color, $bcolor, $bimg) {
   color: $color;
   background: $bcolor url($bimg) repeat;

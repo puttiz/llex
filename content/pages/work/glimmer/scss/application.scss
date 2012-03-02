@@ -7,9 +7,9 @@
 // Partials
 @import "type";
 @import "header";
-//@import "feature";
-//@import "browsing";
-//@import "marketing";
+@import "feature";
+@import "browsing";
+@import "marketing";
 
 body {
   background: url(#{$assets}/bg-repeat.png) repeat 0 0 #dfd5c9;
