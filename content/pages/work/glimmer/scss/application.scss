@@ -1,0 +1,42 @@
+// Core variables and mixins
+@import "variables";
+@import "compass_twitter_bootstrap";
+@import "compass";
+@import "mixins";
+@import "custom";
+// Partials
+@import "type";
+@import "header";
+@import "feature";
+@import "browsing";
+@import "marketing";
+
+body {
+  background: url(#{$assets}/bg-repeat.png) repeat 0 0 #dfd5c9;
+}
+
+// --- Layout ---
+
+//.section {
+//  @extend .container;
+//  width: auto;
+//  @include center-block;
+//}
+
+.topbar {
+  @include bar($black, 0 0 2px 2px);
+}
+
+//.sub {
+//  .panel {
+//    border: 7px solid $white;
+//    margin: 0 0 14px 0;
+//    height: 380px;
+//    background-color: $black;
+//    @include box-shadow(rgba($black,0.4) 1px 1px 1px 0);
+//  }
+//}
+
+.bottombar {
+  @include bar($black, 2px 2px 0 0);
+}

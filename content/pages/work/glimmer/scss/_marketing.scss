@@ -1,0 +1,25 @@
+.marketing {
+  margin-bottom: $baseLineHeight;
+
+  .f, .p, .c {
+    text-align: center;
+
+    &:hover {
+      border: 1px solid lighten($black, 30%);
+    }
+  }
+
+
+//  .c {
+//    @extend .f;
+//    @include box-shadow(none);
+//  }
+
+  .c1, .c2, .c3, .c4, .c5 {
+    text-align: center;
+    h4, span {
+      display: none;
+    }
+  }
+
+}

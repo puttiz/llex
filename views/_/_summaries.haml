@@ -1,0 +1,15 @@
+/ summaries
+- unless pages.empty?
+  - pages.each do |page|
+    %article
+      %figure
+        %img{src: "/assets/i/#{page.abspath}.png", alt: "#{page.metadata('title')}"}
+      %header
+        - if page.date
+          %time{datetime: "#{page.date.to_s}", pubdate: true}= format_date(page.date)
+        %h1
+          %a{href: "#{page.abspath}"}= page.metadata('title')
+      %p
+        ~ page.summary
+      %footer
+        %a{href: "#{page.abspath}"}= page.read_more

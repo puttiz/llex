@@ -1,0 +1,67 @@
+.bar {
+  &.dark { @include background-img($black, $darkBackgroundPath); }
+  &.light { @include background-img($white, $lightBackgroundPath); }
+}
+
+.logo {
+  background: url($logoImgPath) 0 0 no-repeat;
+
+  &:hover {
+    border: 0;
+    background: url($logoImgPath) 0 -102px no-repeat;
+  }
+}
+
+.mastnav .nav > li > a {
+    @include nav-link-font($black);
+
+    &.active {
+      padding-bottom: 2px;
+      border-bottom: 3px solid $orange;
+    }
+
+    &:hover, &:focus {
+      background-color: none;
+      padding-bottom: 2px;
+      border-bottom: 3px solid $blue;
+    }
+}
+
+.box {
+
+  &.light, &.dark {
+    padding: 7px;
+    border: 1px solid lighten($black, 65%);
+//    @include border-radius(5);
+    @include background-img(rgba($white, .3), $lightBackgroundPath);
+    @include box-shadow(1px 1px 15px rgba($black, .3));
+  }
+
+  &.dark {
+    @include background-img(rgba($black, .3), $darkBackgroundPath);
+  }
+}
+
+.tag {
+  &.light {
+    @include slide-span-style($grayDarker, $white, $lightBackgroundPath);
+    a {
+      @include slide-span-link($grayDarker, $blue);
+    }
+  }
+  &.dark {
+    @include slide-span-style($grayLighter, $white, $darkBackgroundPath);
+    a {
+      @include slide-span-link($grayLighter, $orange);
+    }
+  }
+}
+
+.arrow {
+  color: lighten($black, 20%);
+
+  &:hover {
+    color: lighten($black, 40%);
+    text-decoration: none;
+  }
+}

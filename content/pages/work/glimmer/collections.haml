@@ -1,0 +1,200 @@
+Layout: work
+Template: self
+Title: Collections
+Label: browsing
+Url: collections
+/ Date: Jan 2012
+
+/
+  Glimmer for taobao start
+  ============================================================================
+.hd
+  = partial "_zine/glimmer/header"
+.bg
+  /
+    Browsing
+    ============================================================================
+  .browsing
+    = partial "_zine/glimmer/dropmenu"
+
+  /
+    Marketing
+    ============================================================================
+  .marketing
+    /
+      Collection One
+      ============================================================================
+    .c1
+      %h3 Collection One
+      %p Collection One
+      %ul.thumbnails
+        %li.span4
+          .thumbnail.box.light.c
+            %a(href="#")
+              %img(src="http://placehold.it/280x480")
+            %h4 name
+            %span.label.label-warning info
+        %li.span3
+          .thumbnail.box.light.c
+            %a(href="#")
+              %img(src="http://placehold.it/200x220")
+            %h4 name
+            %span.label.label-warning info
+        %li.span3
+          .thumbnail.box.light.c
+            %a(href="#")
+              %img(src="http://placehold.it/200x220")
+            %h4 name
+            %span.label.label-warning info
+        %li.span2
+          .thumbnail.box.light.c
+            %a(href="#")
+              %img(src="http://placehold.it/120x220")
+            %h4 name
+            %span.label.label-warning info
+        %li.span3
+          .thumbnail.box.light.c
+            %a(href="#")
+              %img(src="http://placehold.it/200x220")
+            %h4 name
+            %span.label.label-warning info
+        %li.span5
+          .thumbnail.box.light.c
+            %a(href="#")
+              %img(src="http://placehold.it/360x220")
+            %h4 name
+            %span.label.label-warning info
+
+    /
+      Collection Two
+      ============================================================================
+    .c2
+      %h3 Collection Tow
+      %p Collection Tow
+      %ul.thumbnails
+        - (0...6).each do
+          %li.span4
+            .thumbnail.box.light.c
+              %a(href="#")
+                %img(src="http://placehold.it/280x220")
+              %h4 name
+              %span.label.label-warning info
+
+    /
+      Collection Three
+      ============================================================================
+    .c3
+      %h3 Collection Three
+      %p Collection Three
+      %ul.thumbnails
+        %li.span5
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/360x320")
+          %h4 name
+          %span.label.label-warning info
+        %li.span4
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/280x320")
+          %h4 name
+          %span.label.label-warning info
+        %li.span3
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/200x320")
+          %h4 name
+          %span.label.label-warning info
+        %li.span3
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/200x220")
+          %h4 name
+          %span.label.label-warning info
+        %li.span2
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/120x220")
+          %h4 name
+          %span.label.label-warning info
+        %li.span7
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/520x220")
+          %h4 name
+          %span.label.label-warning info
+    /
+      Collection Four
+      ============================================================================
+    .c4
+      %h3 Collection Four
+      %p Collection Four
+      %ul.thumbnails
+        %li.span6
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/440x220")
+          %h4 name
+          %span.label.label-warning info
+        %li.span3
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/200x220")
+          %h4 name
+          %span.label.label-warning info
+        %li.span3
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/200x220")
+          %h4 name
+          %span.label.label-warning info
+        %li.span3
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/200x220")
+          %h4 name
+          %span.label.label-warning info
+        %li.span3
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/200x220")
+          %h4 name
+          %span.label.label-warning info
+        %li.span6
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/440x220")
+          %h4 name
+          %span.label.label-warning info
+    /
+      Collection Five
+      ============================================================================
+    .c5
+      %h3 Collection Five
+      %p Collection Five
+      %ul.thumbnails
+        %li.span8
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/580x440")
+          %h4 name
+          %span.label.label-warning info
+        %li.span2
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/120x120")
+          %h4 name
+          %span.label.label-warning info
+        %li.span2
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/120x120")
+          %h4 name
+          %span.label.label-warning info
+        %li.span2
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/120x120")
+          %h4 name
+          %span.label.label-warning info
+        %li.span2
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/120x120")
+          %h4 name
+          %span.label.label-warning info
+        %li.span4
+          %a(href="#")
+            %img.box.light.c(src="http://placehold.it/280x120")
+          %h4 name
+          %span.label.label-warning info
+
+  / /marketing
+.ft
+  = partial "_zine/glimmer/footer"
+/
+  Glimmer for taobao end
+  ============================================================================

@@ -1,0 +1,29 @@
+!!! 5
+%html
+  %head
+    %meta{charst: "utf-8"}
+    - if @description
+      %meta{name: "description", content: @description}
+    - if @keywords
+      %meta{name: "keywords", content: @keywords}
+    %title
+      - if @page.metadata('title')
+        = @page.metadata('title') + ' – ' + @site_title
+      - else
+        = @site_title
+    <!--[if ! lte IE 6]><!-->
+    %link{href: "/css/style.css", media: "screen", rel: "stylesheet"}
+    - if local_stylesheet?
+      %link{href: "/css/local.css", media: "screen", rel: "stylesheet"}
+    <!--<![endif]-->
+    /[if lte IE 6]
+      %link{rel: "stylesheet", href: "http://universal-ie6-css.googlecode.com/files/ie6.1.1.css", media: "screen, projection"}
+    /[if lt IE 9]
+      %script{src: "//html5shim.googlecode.com/svn/trunk/html5.js"}
+    %link(href="/articles.xml" rel="alternate" type="application/atom+xml")
+    = partial "_/analytics"
+  %body{class: @page.metadata('class')? @page.metadata('class') : @page.heading}
+    #container
+      = partial "_/header"
+      = yield
+      = partial "_/footer"

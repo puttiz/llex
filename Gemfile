@@ -1,7 +1,15 @@
-source 'http://rubygems.org'
+source :gemcutter
 
-gem 'nesta', '0.9.5'
+gem 'nesta'
+gem 'heroku'
 
+gem 'haml'
+gem 'sass'
+gem 'compass'
+gem 'compass_twitter_bootstrap'
 
-
-# gem (RUBY_VERSION =~ /^1.9/) ? 'ruby-debug19': 'ruby-debug'
+group :development do
+  gem 'guard-livereload'
+  gem 'rack-livereload'
+  gem 'growl'
+end

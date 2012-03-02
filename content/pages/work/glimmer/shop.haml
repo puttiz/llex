@@ -1,0 +1,38 @@
+Layout: work
+Template: self
+Title: All Items
+Label: search
+Url: shop
+/ Date: Jan 2012
+
+/
+  Glimmer for taobao start
+  ============================================================================
+.hd
+  = partial "_zine/glimmer/header"
+.bg
+  /
+    Browsing
+    ============================================================================
+  .search
+    = partial "_zine/glimmer/dropmenu"
+
+  /
+    Marketing
+    ============================================================================
+  .marketing
+    %ul.thumbnails
+      - (1...10).each do
+        %li.span3
+          .thumbnail.box.light.p
+            %a(href="#")
+              %img(src="http://placehold.it/204x200")
+            %h4 name
+            %span.label.label-warning info
+
+  / /marketing
+.ft
+  = partial "_zine/glimmer/footer"
+/
+  Glimmer for taobao end
+  ============================================================================
