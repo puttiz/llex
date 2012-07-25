@@ -1,0 +1,348 @@
+/* @group RAINYPIXELS CSS */
+/*
+------------------------------------------------------
+	Rainypixels Screen Stylesheet
+	
+	created: 	July 24 2010
+	modified: 	N/A
+	
+	by: Nishant Kothary
+------------------------------------------------------
+*/
+/* @end */
+
+
+/* @group RESET */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,pre,a,abbr,article,aside,audio,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,section,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+/* @end */
+
+/* @group CORE UI  */
+a:link, a:visited { color: #962d3e; text-decoration: none; }
+a:hover, a:active { color: #cc3f55; position: relative; left: 1px; top: 1px; }
+body { background: #dddac5 url(../img/bg-khaki.jpg) repeat; color: #343642; font: 100% Georgia, "Times New Roman", Times, serif; letter-spacing: .05em; overflow-x: hidden; }
+a.strike { text-decoration: line-through; }
+.heart { background: url(../img/heart.png) no-repeat; display: block; height: 24px; margin: 0 auto; text-indent: -9999px; width: 28px; }
+.weimaraner { background: url(../img/weimaraner.png) no-repeat; display: block; height: 50px; margin: 35px auto 25px; text-indent: -9999px; width: 84px; }
+.weimaraner:hover { background-position: 0px -50px; }
+.weimaraner-small { background: url(../img/weimaraner-small.png) no-repeat; display: block; height: 24px; margin: 20px auto 20px; text-indent: -9999px; width: 38px; }
+.hand-right { background: url(../img/hand-right.png) no-repeat; display: block; height: 24px; margin: 0 auto; text-indent: -9999px; width: 33px; }
+.umbrella { background: url(../img/umbrella.png) no-repeat; display: block; height: 24px; margin: 0 auto; text-indent: -9999px; width: 24px; }
+html>body { font-size: 16px; }
+html, body { height: 100%; width: 100%;}
+a.proceed { display: block; font-family: "Trebuchet MS"; font-size: .6em; font-weight: bold; letter-spacing: .25em; text-transform: uppercase; }
+	a.proceed span { font-size: 1.2em; }
+a.grayed { color: #aaa; }
+.d { border: 1px solid red; }
+.blue-bar { background: #343642; display: block; height: 5px; width:100%; clear: both; }
+.tweets,
+.comments { background: url(../img/icon-twitter.png) no-repeat scroll 0 2px; display: inline-block; letter-spacing: .2em; padding-left: 14px; font-size: .7em; line-height: 1.2em; font-family: georgia; }
+.comments { background: url(../img/icon-comments.png) no-repeat 0 3px; line-height: 1.4em; padding-left: 16px; }
+a.comments:hover { background-position: 0 -11px; }
+a.tweets:hover { background-position: 0 -12px; }
+#wrap { margin: 0 auto; text-align: center; overflow: visible; position: relative; width: 940px; }
+figure.white-border { padding-top: 6px; }
+figure.white-border img { background: #E7E6E2; border: 3px solid #fff; padding: 5px; }
+		
+/* Inner Wrap */
+.inner-wrap { background: url(../img/border-bottom.png) no-repeat scroll left bottom; display: block; width: 940px; padding: 0 0 10px; position: relative; margin-top: 50px;}
+	.inner-wrap .top { background: url(../img/border-top.png) no-repeat left 35px; display: block; width: 940px; height: 335px; position: relative;}
+	.inner-wrap .middle { background: url(../img/border-bg.png) repeat-y scroll 0px 0px; display: block; width: 940px;}
+	.inner-wrap header { display: block; margin: 0 auto; padding-top: 90px; width: 800px; }
+		.inner-wrap #excerpt time { text-transform: uppercase; font-size: .625em; letter-spacing: .5em; display: inline-block; line-height: 1.3em; }
+		.inner-wrap #excerpt h1 { font-family: "Trebuchet MS"; font-size: 2em; letter-spacing: .05em; margin: 5px auto; text-transform: uppercase; width: 800px; }
+		.inner-wrap #excerpt p { font-size: 1.35em; line-height: 1.45em; margin: 0 auto; padding: 20px 0px 20px 0; text-align: left; width: 640px; word-spacing: .1em; }
+		.inner-wrap #excerpt figure { float: left; padding-right: 20px; margin: 5px 0px 0px 140px; }
+		.inner-wrap #excerpt .proceed { margin-left: 170px; position: relative; padding-top: 5px;}
+	.inner-wrap #body { font-size: 16px; letter-spacing: 0px; line-height: 24px; text-align: left; padding-bottom: 10px; }
+	/* Header Stamps */
+	.inner-wrap.featured header { background: url(../img/seal-featured.png) no-repeat scroll center 0; }
+	.inner-wrap.about header { background: url(../img/seal-about.png) no-repeat scroll center 0; }
+	#writings-list #header .sidebar,
+	#speaking-list #header .sidebar { background: url(../img/seal-works.png) no-repeat scroll center 0; }
+
+/* Sidebar */
+.sidebar { display: block; float: left; position: relative; }
+	.sidebar hgroup { display: block; background: url(../img/header-underline.png) repeat-x center bottom; padding-bottom: 23px; }
+
+.sidebar hgroup { display: block; background: url(../img/header-underline.png) repeat-x center bottom; padding-bottom: 23px; }
+		.sidebar hgroup h1 { background: url(../img/headers.png) no-repeat; height: 33px; margin: 0 auto; text-indent: -9999px; }
+		.sidebar hgroup h2 i { font-size: 1.2em; font-style: italic; font-weight: bold; text-transform: lowercase; }
+		.sidebar hgroup h2, .sidebar hgroup h3 { font-size: 0.625em; font-weight: normal; letter-spacing: .2em; text-transform: uppercase; }
+		.sidebar hgroup h2 { margin-top: 10px; }
+		.sidebar hgroup h3 { margin-top: 2px; }	
+	.sidebar article { display: block; border-bottom: 1px dotted #343642; }
+		.sidebar article:hover { border-bottom: 1px solid #343642; }
+			.sidebar article.first { border-top: 3px solid #343642; }
+			.sidebar article.last { border: none; }
+	.sidebar footer.section-footer { display: block; width: 100%; position: absolute; z-index: 10; bottom: 0px; left: 0px;}	
+		.sidebar footer.section-footer .proceed { border-top: 3px solid #343642; display: block; font-size: .75em; padding-top: 20px; }
+		
+/* Tipsy Tooltip */
+.tipsy { padding: 5px; font-size: 11px; opacity: 0.8; filter: alpha(opacity=80); background-repeat: no-repeat;  background-image: url(../img/tipsy.gif); font-weight: normal;}
+  .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center; }
+  .tipsy-inner { border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+  .tipsy-north { background-position: top center; }
+  .tipsy-south { background-position: bottom center; }
+  .tipsy-east { background-position: right center; }
+  .tipsy-west { background-position: left center; }
+/* @end */
+
+
+/* @group HEADER */
+header .heart { margin-top: 30px; margin-bottom: 12px; }
+#logo { background: url(../img/header-logo.png); display: block; height: 165px; margin: 0 auto; text-indent: -9999px; width: 555px; }
+#nav-top { display: block; margin: 0 auto; margin-top: 40px; margin-bottom: 40px; width: 275px; height: 10px; outline: none; }
+	#nav-top a { background-image: url(../img/nav.png); display: block; float: left; height: 40px; text-indent: -9999px; }
+	#nav-top a:hover { position: static; }
+	#nav-top ul {  }
+	#nav-top li { display: inline; }
+	#nav-top #nav-home a { width: 76px; }
+	#nav-top #nav-home a:hover { background-position: 0 -42px; }
+	.home #nav-top #nav-home a, .home #nav-top #nav-home a:hover { background-position: 0 -84px; }
+	#nav-top #nav-writings a { width: 114px; background-position: -76px 0;}
+	#nav-top #nav-writings a:hover { background-position: -76px -42px; }
+	.writings #nav-top #nav-writings a, .writings #nav-top #nav-writings a:hover { background-position: -76px -84px; }
+	#nav-top #nav-about a { width: 81px; background-position: -190px 0; }
+	#nav-top #nav-about a:hover { background-position: -190px -42px; }
+	.about #nav-top #nav-about a, .about #nav-top #nav-about a:hover { background-position: -190px -84px; }
+/* @end */
+
+
+
+/* @group FOOTER */
+#common-footer { float: right; position: relative; overflow: visible; margin-top: -250px; width: 940px; }
+	#common-footer #bookmark  { background: url(../img/footer-band.png) no-repeat scroll 0px 0px; display: block; height: 85px; position: relative; margin-right: -200px; margin-left: -1915px; text-indent: -9999px;}
+	#common-footer #bookmark:hover { background-position: 0px -85px; }  
+	#common-footer #copyright { font-family: "Trebuchet MS"; font-size: .6em; letter-spacing: .5em; margin-top: 40px;text-transform: uppercase; }
+	#common-footer #social { font-size: 0.6875em; margin-top: 8px; letter-spacing: .1em; }
+		#common-footer #social li { display: inline; }
+	#common-footer #nav-bottom { display: block; font-size: .6em; letter-spacing: .3em; margin-top: 8px; text-transform: uppercase; }
+		#common-footer #nav-bottom li { display: inline; }
+	#common-footer .heart { margin-top: 10px; margin-bottom: 20px;}
+/* @end */
+
+
+
+/* @group HOME */
+
+.home .inner-wrap .top { height: 375px; }
+
+/* Elsewhere */
+#elsewhere { height: 679px; margin-top: 50px; width: 300px; }
+	#elsewhere .tweets { font-size: 1em; line-height: 1.4em; font-family: "Trebuchet MS"; margin-left: 2px; }
+	#elsewhere hgroup h1 { width: 162px; }
+	#elsewhere article { height: 47px; line-height: 1em; padding: 10px 0;}
+		#elsewhere article h1 { font-size: 1em; font-weight: normal; letter-spacing: .1em; }
+		#elsewhere article footer { display: block; font-family: "Trebuchet MS"; font-size: .6em; letter-spacing: .13em; }
+		#elsewhere article .proceed { font-size: 1.1em; }
+
+/* From the Journal */		
+#from-the-journal { height: 675px; margin-left: 100px; margin-top: 50px; width: 540px;}
+	#from-the-journal hgroup h1 { background-position: -162px 0; width: 270px; }
+	#from-the-journal article { height: 142px; text-align: left; padding: 14px 8px 23px 8px; }
+		#from-the-journal article figure { display: block; float: left; padding-top: 7px; padding-right: 10px;}
+		#from-the-journal article figure.right { float: right; padding-right: 0px; padding-left: 10px; } 
+			#from-the-journal article figure img { width: 135px; }
+		#from-the-journal article h1 { font-size: 1.2em; font-weight: normal; letter-spacing: 2px; }
+		#from-the-journal article time { text-transform: uppercase; font-size: .5625em; letter-spacing: .5em; display: inline-block; line-height: 1.6em; background-position: 0px 2px;}
+		#from-the-journal article p { font-size: .9em; line-height: 1.5em; margin-top: 10px; }
+		#from-the-journal article footer { display: block; font-size: 1.1em; margin-top: 10px; }
+
+/* Related */
+#work-and-speak { background: url(../img/border-top.png) no-repeat scroll; clear: both; display: block; float: left; margin-top: 40px; padding-bottom: 320px; padding-top: 40px; width: 940px; position: relative;}
+
+#recent-work { height: 390px; text-align: left; padding-right: 40px; width: 580px; }
+	#recent-work hgroup { background: none; text-align: center; padding-bottom: 40px; }
+	#recent-work hgroup h1 { background-position: -430px 0; width: 197px; }
+	#recent-work figure { display: block; float: left; height: 280px; padding-left: 20px; padding-right: 20px; width: 280px;  }
+		#recent-work figure img { height: 280px; width: 280px; }
+	#recent-work h1 { font-size: 1.625em; font-weight: normal; letter-spacing: .1em; }
+	#recent-work p { font-size: .98em; line-height: 1.5em; margin-top: 10px;  }
+	#recent-work .section-footer { margin-left: 320px; width: 260px; }
+		#recent-work footer.section-footer .proceed { border: none; }
+
+/* Speaking */
+#speaking { height: 395px; text-align: center; padding-right: 30px; width: 290px; }
+	#speaking hgroup { background: none; text-align: center; padding-bottom: 40px; }
+	#speaking hgroup h1 { background-position: -627px 0; width: 140px; }
+	#speaking article { height: 42px; line-height: 1em; padding: 9px 0;}
+		#speaking article h1 { font-size: 1em; font-weight: normal; letter-spacing: .1em; }
+		#speaking article footer { display: block; font-family: "Trebuchet MS"; font-size: .6em; letter-spacing: .13em; }
+		#speaking article .proceed { font-size: 1.1em; }
+	#speaking footer.section-footer { width: 290px; }
+/* @end */
+
+
+
+/* @group WRITINGS */
+.writings #common-footer { position: static; overflow: none; padding-top: 340px; margin-top: -280px;}
+#writings-list .sidebar { float: none; padding-top: 100px; width: 660px; margin: 0 auto; }
+	#writings-list .sidebar h1 { background-position: 0px -36px; width: 330px; }
+#writings-list #filters { display: block; width: 660px; margin: 0 auto;}
+#writings-list #filters .filter { display: block; float: left; font-size: .75em; text-transform: uppercase; border-bottom: 3px solid #343642; width: 208px; padding: 32px 6px 32px 6px; }
+	#writings-list #filters .filter.selected { border-bottom: 6px solid #343642; position: static; background: #e7e6e2; }
+	#filters a.filter:hover { border-bottom: 3px solid #343642; position: static; background: #edece8; }
+	#filters .filter h1 { letter-spacing: .3em; font-weight: normal; }
+	#filters .filter h2 { color: #343642; font-weight: normal; padding-top: 10px; line-height: 1.5em; font-size: .8em; letter-spacing: .2em;}
+	#filters .filter h3 { color: #343642; font-weight: bold; padding-top: 7px; font-family: "Trebuchet MS"; }
+#writings-list #body article { text-align: left; width: 640px; display: block; margin: 0 auto; clear: both; padding: 20px 10px 30px 10px; border-bottom: 1px dotted #343642; }
+	#writings-list #body article.first { padding-top: 10px; }
+	#writings-list #body article.last { margin-bottom: 80px; border-bottom: 3px solid;}
+	#writings-list article figure { display: block; float: left; padding-top: 13px; padding-right: 20px;}
+		#writings-list article figure.right { float: right; padding-right: 0px; padding-left: 10px; } 
+		#writings-list article figure img { width: 135px; }
+	#writings-list article header { width: 660px; padding-top: 0px; margin: 0 auto; }
+	#writings-list article h1 { font-size: 1.375em; font-weight: normal; letter-spacing: 2px; }
+	#writings-list article time,
+	#writings-list article time + i,
+	#writings-list article time + i + a { text-transform: uppercase; font-size: .5625em; letter-spacing: .5em; }
+	#writings-list article p { font-size: .9em; line-height: 1.5em; margin-top: 10px; }
+	#writings-list article footer { display: block; font-size: 1.1em; margin-top: 10px; }	
+/* @end */
+
+
+/* @group WRITING */
+
+.writing #common-footer { position: static; overflow: none; padding-top: 340px; }
+.writing #body strong { font-style: italic; }
+.writing #body-inner { margin: 0 auto; width: 540px; padding: 0px 20px 0px 20px; }
+
+/* Body Styles */
+	.writing #body-inner:first-child { padding-top: 30px; background: url(../img/bg-excerpt.png) no-repeat scroll 50% 0; }
+	.writing #body-inner p,
+	.writing #body-inner li { letter-spacing: .03em; padding-bottom: 20px; text-indent: 20px; word-spacing: .2em; }
+	.writing #body-inner h1, 
+	.writing #body-inner h2,
+	.writing #body-inner h3 { font-weight: normal; letter-spacing: .1em; margin: 0 auto; padding: 20px 0 40px 0; text-transform: uppercase; text-align: center; clear: both; }
+	.writing #body-inner h1 { font-size: 1.7em; line-height: 1.2em; }
+	.writing #body-inner h2 { font-size: 1.5em; text-transform: none;}
+	.writing #body-inner h3 { font-size: 1.2em; text-transform: none; font-style: italic; }
+	.writing #body-inner blockquote { background: #E7E6E2; font-style: italic; margin-left: -40px; margin-bottom: 20px; padding: 20px 20px 0px 40px; width: 560px; }
+		.writing #body-inner blockquote p { font-size: 1.1em; line-height: 1.6em; }
+		.writing #body-inner blockquote * { text-indent: 0px; }
+		.writing #body-inner blockquote.quotation { background: none; padding-top: 10px; border-top: 3px solid #e7e6e2; border-bottom: 3px solid #e7e6e2; }
+		.writing #body-inner blockquote.quotation span { display: block; float: left; font-size: 5em; margin-left: -50px; opacity: .2; margin-top: 22px; width: 35px;}
+		.writing #body-inner blockquote.quotation p { padding-bottom: 10px; }
+	/* Conversation */
+	.writing #body-inner blockquote.conversation { padding-bottom: 20px; }
+	.writing #body-inner blockquote.conversation p { font-size: 1em; padding-bottom: 5px; font-style: normal; }
+	.writing #body-inner ul,
+	.writing #body-inner ol { margin-left: 20px; margin-bottom: 20px;}
+	.writing #body-inner li { list-style-type: square; padding-bottom: 10px; padding-left: 20px; text-indent: 0px; list-style-position: outside; }
+	.writing #body-inner ol li { list-style-type: lower-roman; }
+	.writing #body-inner .video { margin-top: 25px; margin-bottom: 35px; margin-left: -50px; }
+	
+	/* Figures */
+	/* Regular */
+	.writing #body-inner figure { display: inline-block; float: left; margin: 0px 0px 20px -200px; }
+	.writing #body-inner figure img { display: block; float: left; }
+	.writing #body-inner figure figcaption { color: #848484; font-size: .8em; letter-spacing: .08em; font-style: italic; padding-top: 7px; word-spacing: .2em; float: left; clear: both; margin: 0px 40px 0px 0px; max-width: 700px; line-height: 1.5em; }
+	/* Left */
+	.writing #body-inner figure.left img { margin: 0px 30px 0px 80px; }
+	.writing #body-inner figure.left figcaption { margin: 0px 0px 0px 80px; }
+	/* Centered */
+	.writing #body-inner figure.center { width: 940px; margin: 60px 0px 60px -200px; }
+	.writing #body-inner figure.center img { display: block; margin: 0 auto; text-align: center; float: none; }
+	.writing #body-inner figure.center figcaption { display: block; margin: 0 auto; text-align: center; float: none; }
+	/* Floated Right */
+	.writing #body-inner figure.right { float: right; margin: 0px 0px 20px 40px;}
+	/* Left Aligned */
+	.writing #body-inner figure figcaption.left { float: left; }
+	/* Pair */
+	.writing #body-inner figure.two { margin: 0px 0px 20px 0px; }
+	.writing #body-inner figure.two img { clear: none; display: inline; margin:0px; }
+	.writing #body-inner figure.two img + img { margin-left: 15px; }
+	.writing #body-inner figure.two figcaption { margin: 0 auto; display: block; clear: both; float: none; text-align: center; }
+	
+	/* Two Grid */
+	.writing #body-inner .two-grid { width: 940px; margin: 0px 0px 30px -200px; display: inline-block; }
+		.writing #body-inner .two-grid figure { display: inline-block; float: left; width: 385px; margin: 0px; }
+		.writing #body-inner .two-grid figure:first-child { margin: 0 0 20px 70px; }
+		.writing #body-inner .two-grid figure:first-child + figure { margin: 0px 0px 0px 30px; }
+	
+	/* Bottom Nav */	
+	.writing #more-nav { background: url(../img/border-bg.png) repeat-y scroll 0px 0px; display: block; padding-top: 20px; padding-bottom: 100px; position: relative; width: 940px; }
+		.writing #more-nav ul { text-transform: uppercase; width: 760px; margin-left: 90px; padding-top: 40px; background: url(../img/header-underline.png) repeat-x scroll left top; }
+		.writing #more-nav li { display: block; float: left; font-size: .8em; letter-spacing: .25em; }
+			.writing #more-nav li.prev { text-align: right; width: 360px; }
+				.writing #more-nav li.prev > span { display: block; margin: 10px 0px 0 0; text-transform: none; }
+				.writing #more-nav li.prev > span > span { color: #848484; display: block; font-size: .8em; margin-top: 3px; text-transform: uppercase; }
+			.writing #more-nav li.next { text-align: left; width: 360px; }
+				.writing #more-nav li.next > span { display: block; margin: 10px 0 0 0px; text-transform: none; }
+				.writing #more-nav li.next > span > span { color: #848484; display: block; font-size: .8em; margin-top: 3px; text-transform: uppercase; }
+			.writing #more-nav li.all a:link, 
+			.writing #more-nav li.all a:visited  { font-family: Baskerville, "Baskerville Old Face", Georgia; font-weight: bold; display: block;  width: 40px; height: 17px; }
+			
+	/* Comment Sidebar */
+	.writing .comment-sidebar { width: 760px; margin: 0 auto; float: none; margin-top: 60px; }
+		.comment-sidebar hgroup { background: url(../img/header-underline-simple.png) repeat-x scroll left bottom; }
+		.comment-sidebar hgroup h1 { background-position: -765px 0px; width: 263px;}	
+	
+	/* Comments */
+	#comments article { text-align: left; padding: 25px 45px 5px 0; min-height: 90px; }
+		#comments article.last { border-bottom: none; }
+		#comments article:hover { background: none; }
+			#comments article img { float: left; height: 60px; width: 60px; margin-left: 70px; padding: 5px; background: url(../img/bg-transparent.png) repeat scroll; }
+			#comments article address { float: left; font-size: .8em; text-transform: uppercase; font-style: normal; font-family: "Trebuchet MS"; letter-spacing: .15em; padding-left: 35px; line-height: 14px;}
+			#comments article time { padding-left: 10px; font-size: .62em; line-height: 16px; vertical-align: top; text-transform: uppercase; font-family: "Trebuchet MS"; letter-spacing: .15em; color: #6c7188; }
+			#comments article .body { padding: 8px 0 0 175px;}
+				#comments article .body p { letter-spacing: .08em; padding-bottom: 20px; text-indent: 50px; word-spacing: .2em; line-height: 1.5em; text-indent: 0px; }
+				
+	/* Leave A Comment */
+	#leave-a-comment h1 { background-position: -1030px 0px; width: 223px; }
+	#leave-a-comment #comment-avatar {  float: right; height: 60px; width: 60px; margin: 28px 40px 0 0; padding: 5px; background: url(../img/bg-transparent.png) repeat scroll; }
+	#leave-a-comment #comment-help { float: right; width:20px; height: 20px; clear: both; margin: 10px 65px 0 0; }
+	#leave-a-comment form { background: url(../img/comment-labels.png) no-repeat scroll; height: 430px; text-align: left; padding-left: 150px; margin-top: 30px; margin-left: 30px; }
+		#leave-a-comment form label { text-indent: -9999px; display: block; height: 0px; }
+		#leave-a-comment form input,
+		#leave-a-comment form textarea { margin: 0px 0 21px 0; background: url(../img/comment-fields.png) no-repeat scroll 0 -120px; border: 0; width: 427px; height: 39px; font-size: 1em; font-family: "Trebuchet MS"; padding: 0 10px 0 10px; letter-spacing: .05em; }
+		#leave-a-comment form input.focus { background-position: 0 -80px; }
+		#leave-a-comment form input.blur { background-position: 0 -119px; }
+		#leave-a-comment form input.error,
+		#leave-a-comment form textarea.error { border: 1px dotted #ff0006; }
+		#leave-a-comment #comment-url { background-position: 0px -39px; width: 519px; }
+			#leave-a-comment form input#comment-url.focus { background-position: 0px 0px; }
+		#leave-a-comment form textarea#comment-comment { height: 196px; width: 520px; background-position: 0px -375px; padding: 10px; }
+			#leave-a-comment form textarea#comment-comment.focus { background-position: 0px -160px; }
+		#leave-a-comment form #comment-submit { width: 122px; height: 35px; background: url(../img/button-submit.png) no-repeat scroll; text-indent: -9999px; }
+			#leave-a-comment form #comment-submit:hover { background-position: 0px -35px; }
+	
+/* @end */
+
+
+/* @group SPEAKING */
+.speaking #common-footer { position: static; overflow: none; padding-top: 340px; margin-top: -280px;}
+.speaking .inner-wrap .top { height: auto; }
+#speaking-list .sidebar { float: none; padding-top: 100px; width: 660px; margin: 0 auto; }
+	#speaking-list .sidebar h1 { background-position: -330px -36px; width: 275px; }
+#speaking-list #body article { text-align: left; width: 640px; display: block; margin: 0 auto; clear: both; padding: 30px 10px 40px 10px; border-bottom: 1px dotted #343642; }
+	#speaking-list #body article.first { padding-top: 20px; }
+	#speaking-list #body article.last { margin-bottom: 80px; border-bottom: 3px solid;}
+	#speaking-list article figure { display: block; float: left; padding-top: 10px; padding-right: 20px;}
+		#speaking-list article figure.right { float: right; padding-right: 0px; padding-left: 10px; } 
+		#speaking-list article figure img { width: 135px; }
+	#speaking-list article header { width: 660px; padding-top: 0px; margin: 0 auto; }
+	#speaking-list article h1 { font-size: 1.375em; font-weight: normal; letter-spacing: 2px; }
+	#speaking-list article time,
+	#speaking-list article cite { text-transform: uppercase; font-size: .5625em; letter-spacing: .5em; font-style: normal;}
+	#speaking-list article p { font-size: 1em; line-height: 1.525em; margin-top: 10px; word-spacing: 1.25px;}
+	#speaking-list article footer { display: block; font-size: 1.1em; margin-top: 10px; }	
+/* @end */
+
+
+/* @group ABOUT */
+.about #common-footer { position: static; overflow: none; padding-top: 340px; margin-top: -280px; }
+.about .inner-wrap .top {  height: 120px; background-image: url(../img/border-top.png); }
+.about #header header h1 { background: url(../img/about-header.png) no-repeat scroll 0px -10px; height: 310px; padding-bottom: 40px; text-indent: -9999px; width: 780px; }
+.about header header:hover { background-position: 20px -554px; }
+.about #body * { margin: 0 auto; text-align: left; width: 640px; }
+	.about #body p { letter-spacing: .03em; padding: 0px 20px 20px 20px; word-spacing: .2em; }
+	.about #body p.last { padding-bottom: 40px; }
+		.about #body a:link.rss, 
+		.about #body a:visited.rss { background: url(../img/rss.png) no-repeat 0 center; color: #f79b33; padding-left: 17px; }
+	.about #body p.contact { background: #E7E6E2; text-indent: 0px; text-align: center; padding-top: 40px; padding-bottom: 40px; }
+	.about #body .about-site { font-size: .7em; padding: 40px 20px 60px 20px; text-align: center; width: 500px; text-indent: 0px; }
+		.about #body .about-site .mac { background: url(../img/mac.png) no-repeat 0 center; padding-left: 18px; padding-top: 2px; }
+		.about #body .about-site .pc { background: url(../img/pc.png) no-repeat 0 center; padding-left: 20px; padding-top: 2px; }
+	
+/* @end */
